@@ -4,6 +4,10 @@ Fork of [VSCode Advanced New File](https://github.com/patbenatar/vscode-advanced
 
 Manually move code selection to a new or existing file when code refactor/extraction isn't working
 
+Simple demonstration
+
+![Demo Animation](https://github.com/leo-dh/vscode-move-selection/blob/master/animation.gif)
+
 ## Configuration Example
 
 ```
