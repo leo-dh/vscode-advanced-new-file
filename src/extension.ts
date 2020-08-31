@@ -365,7 +365,12 @@ export async function command(context: vscode.ExtensionContext) {
   const selection = editor.selection;
   const selectionText = editor.document.getText(selection);
   if (selectionText.length === 0) {
-    vscode.window.showErrorMessage("There isn't any text selected.");
+    const disposable = vscode.window.setStatusBarMessage(
+      "There isn't any text selected."
+    );
+    setTimeout(() => {
+      disposable.dispose();
+    }, 3000);
     return;
   }
   const roots = workspaceRoots();
