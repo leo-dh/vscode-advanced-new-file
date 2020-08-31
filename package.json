@@ -1,43 +1,39 @@
 {
-  "name": "advanced-new-file",
-  "displayName": "advanced-new-file",
-  "description": "Create files anywhere in your workspace from the keyboard",
-  "version": "1.2.2",
-  "publisher": "patbenatar",
+  "name": "move-selection",
+  "displayName": "move-selection",
+  "description": "Move text selection to another file",
+  "version": "0.0.1",
+  "publisher": "leo-dh",
   "engines": {
     "vscode": "^1.17.0"
   },
-  "homepage": "https://github.com/patbenatar/vscode-advanced-new-file",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/patbenatar/vscode-advanced-new-file.git"
+    "url": ""
   },
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.advancedNewFile"
+    "onCommand:extension.moveSelectionToFile"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.advancedNewFile",
-        "title": "Advanced New File"
+        "command": "extension.moveSelectionToFile",
+        "title": "Move Selection To File"
       }
     ],
     "keybindings": [
-      {
-        "command": "extension.advancedNewFile",
-        "key": "alt+ctrl+n",
-        "mac": "alt+cmd+n"
-      }
+      {}
     ],
     "configuration": {
       "type": "object",
-      "title": "AdvancedNewFile configuration",
+      "title": "moveSelection base configuration",
       "properties": {
-        "advancedNewFile.exclude": {
+        "moveSelection.exclude": {
           "type": [
             "object",
             "null"
@@ -48,12 +44,12 @@
           "default": null,
           "description": "Directories to ignore in auto-complete"
         },
-        "advancedNewFile.showInformationMessages": {
+        "moveSelection.showInformationMessages": {
           "type": "boolean",
           "default": true,
           "description": "Control whether top-bar notifications display"
         },
-        "advancedNewFile.convenienceOptions": {
+        "moveSelection.convenienceOptions": {
           "type": "array",
           "default": [
             "last",
